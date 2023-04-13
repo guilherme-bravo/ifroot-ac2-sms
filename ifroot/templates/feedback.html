@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block conteudo %}
+    {% if mensagem != '' %}
+        <h2>{{mensagem}}</h2>
+    {% endif %}
+<form action="/feedback_positivo" method="POST">
+    <button><a class="btn-default">Feedback Positivo</a></button>
+</form>
+<br></br>
+<form action="/feedback_negativo" method="POST">
+    <button><a class="btn-default">Feedback Negativo</a></button>
+</form>
+<br></br>
+<button class="btn-default"><a href="/">Voltar</a></button>
+{% endblock %}
